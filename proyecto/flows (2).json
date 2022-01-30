@@ -1,0 +1,97 @@
+[
+    {
+        "id": "605536dc8a62afd6",
+        "type": "tab",
+        "label": "Flow 5",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6fcc432cdc614788",
+        "type": "debug",
+        "z": "605536dc8a62afd6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "bd27463d1c103de9",
+        "type": "telegram receiver",
+        "z": "605536dc8a62afd6",
+        "name": "",
+        "bot": "9018a8ba3a5debd4",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "5c5faa8a5f6b22b4",
+                "6fcc432cdc614788"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5c5faa8a5f6b22b4",
+        "type": "serial out",
+        "z": "605536dc8a62afd6",
+        "name": "",
+        "serial": "b6464cba4e22592f",
+        "x": 670,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "9018a8ba3a5debd4",
+        "type": "telegram bot",
+        "botname": "prueba_serrano_bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "b6464cba4e22592f",
+        "type": "serial-port",
+        "serialport": "COM13",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    }
+]
